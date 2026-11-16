@@ -10,22 +10,7 @@ else
     echo " User is a sudo user , user id is ${userid}"
 fi
 
-echo " procedding to install other packages"
-install_package ngnix 
-install_package mysql 
-# echo "installing ngnix package"
-# dnf install nginx -y
-# echo " Check the  completion status check"
-# if [ $? -ne 0 ]; then
-#     echo " command failed to install "
-#     exit 1
-# else
-#     echo " The command return status is $?"
-# fi
-
-# echo "installing mysql package"
-# dnf install mysql -y
-# echo " Check the  completion status check"
+ 
 
 
 func install_package()
@@ -41,3 +26,7 @@ func install_package()
     fi
 
 }
+
+echo " procedding to install other packages"
+install_package ngnix 
+install_package mysql
