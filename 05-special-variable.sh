@@ -1,0 +1,6 @@
+echo "The paramater passed to the script are: $@"
+echo "File name : $0"
+echo "Total parameters pased to the script are: $#"
+# echo " env commands: $(ENV)"
+echo "Who is the user: $(whoami)"
+echo " Script executed at $(date)"
