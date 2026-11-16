@@ -1,11 +1,11 @@
 
 #!/bin/bash
 
-log_folder = "/var/log/shell-practise"
-log_file="${log_folder}/$0.log"
+log_folder="/var/log/shell-practise"
+log_file="${log_folder}/${0}.log"
 
 mkdir -p $log_folder
-
+echo "log file path  is $log_file"
 
 
 echo " check the user id"
