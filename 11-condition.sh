@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 echo " check the user id"
@@ -10,17 +11,14 @@ else
     echo " User is a sudo user , user id is ${userid}"
 fi
 
- 
-
-
-func install_package()
+function install_package()
 {
     echo " Install the package : $1"
     dnf install $1 -y
-    echo " check if package $1 is installed "
+    #echo " check if package $1 is installed "
     if [ $? -ne 0 ]; then
-    echo " command failed to install $1 "
-    exit 1
+         echo " command failed to install $1 "
+        exit 1
     else
         echo " The $1 package installed successfully"
     fi
@@ -28,5 +26,5 @@ func install_package()
 }
 
 echo " procedding to install other packages"
-install_package ngnix 
-install_package mysql
+install_package nginx
+#install_package mysql
